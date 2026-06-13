@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FolderSearch, AlertCircle, Loader2, Zap, FileX, Network, Share2 } from 'lucide-react';
+import ASTraLogo from './ASTraLogo';
 
 export default function Sidebar({ 
   onScan, isLoading, error, activeNode, onReset, deadCode, viewMode, onToggleViewMode 
@@ -14,12 +15,12 @@ export default function Sidebar({
   return (
     <div className="w-80 bg-slate-900 border-r border-slate-800 p-6 flex flex-col h-full text-slate-200 z-20 shadow-2xl relative">
       <div className="mb-8 shrink-0">
-        <h1 className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent flex items-center gap-2">
-          <FolderSearch size={24} className="text-emerald-400"/>
-          AST Mapper
-        </h1>
-        <p className="text-xs text-slate-500 mt-2 font-mono">Architecture & Tech Debt Analyzer</p>
-      </div>
+            <h1 className="text-2xl font-bold text-slate-100 flex items-center gap-3 tracking-tight">
+                <ASTraLogo className="w-8 h-8 shrink-0 drop-shadow-md" />
+                ASTra
+            </h1>
+            <p className="text-xs text-slate-500 mt-2 font-mono ml-11">Codebase Architecture Mapper</p>
+       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 shrink-0 mb-6">
         <div>

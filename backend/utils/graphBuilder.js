@@ -10,7 +10,6 @@ export const buildGraph = (parsedFiles) => {
                 label: file.id.split('/').pop(),
                 fullPath: file.id,
                 size: file.size,
-                // 🟢 THE FIX: Pass the parsed props down to the frontend
                 jsxDependencies: file.jsxDependencies || [] 
             },
             position: { x: Math.random() * 600, y: Math.random() * 600 } 

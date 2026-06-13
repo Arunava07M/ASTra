@@ -15,13 +15,10 @@ export const scanDirectory = async (req, res, next) => {
             return res.status(400).json({ error: "The provided path does not exist on this machine." });
         }
 
-        // 1. Recursively locate all files
         const files = getAllFiles(targetPath);
 
-        // 2. Parse out AST data and local imports
         const parsedData = parseFiles(files, targetPath);
 
-        // 3. Construct React Flow structured payload
         const graphPayload = buildGraph(parsedData);
 
         res.json(graphPayload);
