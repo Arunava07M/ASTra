@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/logo.svg" alt="ASTra Logo" width="80" height="80">
+  <img src="frontend/public/logo.svg" alt="ASTra Logo" width="80" height="80">
   
   <h1>ASTra</h1>
   <p><strong>A local full-stack static analysis engine that visually maps out React codebase architectures, prop-drilling, and blast radiuses.</strong></p>
